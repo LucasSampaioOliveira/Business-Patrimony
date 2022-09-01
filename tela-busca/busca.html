@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/tela-busca/busca.css">
+    <title>Buscar patrimônio</title>
+</head>
+
+<body onload="listar()">
+
+    <section class="navigation">
+        <div class="nav-container">
+          <div class="brand">
+            <a href="#!">Logo</a>
+          </div>
+          <nav>
+            <div class="nav-mobile"><a id="navbar-toggle" href="#!"><span></span></a></div>
+            <ul class="nav-list">
+              <li>
+                <a href="#!">Gerenciar Conta</a>
+              </li>
+              <li>
+                <a href="#!">Gerenciar Perfis</a>
+              </li>
+              <li>
+                <a href="/tela-perfil/perfil.html">Criar Perfil</a>
+              </li>
+              <li>
+                <a href="#!">Contato</a>
+              </li>
+              <li>
+                <a href="/index.html">Sair</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+
+
+    <!--
+    <div class="profile" style="margin-left:1750px; background-color: crimson; margin-right: 18px; border-radius: 5%;">
+        <img src="/img/person.png" alt="" style="width: 30px; margin-left:45px; margin-top: 10px;">
+        <p style="color: #fff;  font-weight:bold;">Nome do usuário</p>
+        <a href="/index.html"><button style=" text-decoration:none; margin-left:20px; width: 80px; border: 2px solid gray;">Sair</button></a>
+    </div>
+    -->
+    <div class="container-img">
+        <img src="/img/Logo-TCC 2.png" alt="">
+    </div>
+
+
+    <div class="search-wrapper">
+        <div class="input-holder">
+            <input type="text" class="search-input" placeholder="Buscar patrimônio" />
+            <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+        </div>
+        <span class="close" onclick="searchToggle(this, event);"></span>
+
+    </div>
+
+
+    <a href="/tela-cadastro/cadastro.html"><button class="bn632-hover bn28">Novo Cadastro</button></a>
+
+    <div class="arrow arrow_first"></div>
+    <div class="arrow arrow_second"></div>
+
+
+    <form id="form-patrimonio" action="" method="POST";">
+
+        <div id="box-editar-patrimonio" class=""
+            style="position: absolute; top: 500px; left: 200px; display: none; height: 500px; width: 300px; border: 3px solid crimson; background-color: #474747;">
+
+            <div style="text-align: center; color: #fff;">
+                <h1>Editar Patrimônio</h1>
+            </div>
+
+
+            <div class="box-editar-id" style="text-align: center; margin-bottom: 25px; color: #fff; font-weight: bold;">
+                <span>Patrimônio</span>
+                <input type="text" id="id" name="id" value="0">
+            </div>
+
+            <div class="box-editar-tipo"
+                style="text-align: center; margin-bottom: 25px; color: #fff; font-weight: bold; margin-right: 15px;">
+                <span>Tipo</span>
+                <input type="text" id="tipo" name="tipo" value="0">
+            </div>
+
+            <div class="box-editar-modelo"
+                style="text-align: center; margin-bottom: 25px; color: #fff; font-weight: bold; margin-right: 35px;">
+                <span>Modelo</span>
+                <input type="text" id="modelo" name="modelo" value="0">
+            </div>
+
+            <div class="box-editar-observacao" style="text-align: center; color: #fff; font-weight: bold;">
+
+                <div style="margin-bottom: 5px;"> <span>Observação</span></div>
+
+                <textarea name="observacao" id="observacao" cols="30" rows="10"></textarea>
+            </div>
+
+            <div style=" display: inline-block; margin-left: 70px; "><button type="submit">Salvar</button></div>
+            <div style="display: inline-block; margin-top: 20px; margin-left: 30px;"><button>Cancelar</button></div>
+        </div>
+
+    </form>
+
+    <table class="container">
+
+        <div class="container-table-title">
+            <h1 class="table-title">Tabela de patrimônios</h1>
+        </div>
+
+        <thead>
+            <tr>
+                <th>
+                    <h1>Patrimônio</h1>
+                </th>
+                <th>
+                    <h1>Tipo</h1>
+                </th>
+                <th>
+                    <h1>Modelo</h1>
+                </th>
+                <th>
+                    <h1>Data</h1>
+                </th>
+                <th>
+                    <h1>Localização</h1>
+                </th>
+                <th>
+                    <h1>Valor</h1>
+                </th>
+                <th>
+                    <h1>Observação</h1>
+                </th>
+                <th>
+                    <h1>Ações</h1>
+                </th>
+            </tr>
+        </thead>
+        <tbody id="tb-body">
+             <tr>
+                <td>1</td>
+                <td>PC</td>
+                <td>Dell</td>
+                <td>11/08/2022</td>
+                <td>Sala info 4</td>
+                <td>3200R$</td>
+                <td>Perfeito estado</td>
+                <td>
+                    <i class="material-icons button edit">edit</i> 
+                    <i class="material-icons button delete" data-action="delete" data-patrimonio="123456">delete</i>
+                    <i class="material-icons button edit">trending_up</i> 
+                </td>
+            </tr>
+
+
+
+            <tr>
+                <td>2</td>
+                <td>Cadeira</td>
+                <td>DT3</td>
+                <td>09/08/2022</td>
+                <td>Sala info 6</td>
+                <td>800R$</td>
+                <td>Perfeito estado</td>
+                <td>
+                    <i class="material-icons button edit">edit</i> 
+                    <i class="material-icons button delete" data-action="delete" data-patrimonio="123456">delete</i>
+                    <i class="material-icons button edit">trending_up</i> 
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td>3</td>
+                <td>Monitor</td>
+                <td>Acer</td>
+                <td>25/07/2022</td>
+                <td>Sala info 2</td>
+                <td>1200R$</td>
+                <td>Tela danificada</td>
+                <td>
+                    <i class="material-icons button edit">edit</i> 
+                    <i class="material-icons button delete" data-action="delete" data-patrimonio="123456">delete</i>
+                    <i class="material-icons button edit">trending_up</i> 
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <script src="/tela-busca/jquery.js"></script>
+
+    <script src="/tela-busca/busca.js"></script>
+
+    <script src="/matomo/matomo.js"></script>
+
+</body>
+
+</html>

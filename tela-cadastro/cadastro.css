@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+ 	padding: 0;
+}
+
+*, ::before, ::after {
+  box-sizing: inherit;
+}
+
+
+body {
+  background:#252525;
+  background-size: cover;
+	font-family: "Roboto","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif,aclonica;
+    font-size:14px;
+	color:white;
+}
+
+
+
+
+
+h3 {
+  font-size: 2.92rem;
+  line-height: 110%;
+  margin: 1.46rem 0 1.168rem 0;
+}
+
+.center, .center-align {
+  text-align: center;
+}
+
+form {
+  display: block;
+  margin-top: 0em;
+  margin-block-end: 1em;
+}
+
+label {
+  font-size: 0.8rem;
+  color: #9e9e9e;
+}
+
+
+input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #9e9e9e;
+  border-radius: 0;
+  outline: none;
+  height: 3rem;
+  width: 100%;
+  font-size: 1rem;
+  margin: 0 0 15px 0;
+  padding: 0;
+  box-shadow: none;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  transition: all .3s;
+}
+
+
+#retorno {
+
+  color: #000;  
+
+}
+.input-field .prefix ~ input, .input-field .prefix ~ textarea {
+  margin-left: 3rem;
+  width: 92%;
+  width: calc(100% - 3rem);
+}
+
+
+.input-field {
+  position: relative;
+  margin-top: 1rem;
+}
+
+
+
+container .row {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+
+
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 90%;
+}
+
+
+.row .col.offset-s3 {
+  margin-left: 25%;
+}
+
+.row .col.s6 {
+  width: 50%;
+}
+
+
+.row .col {
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   padding: 0 0.75rem; 
+}
+
+
+
+
+
+.btn, .btn-large {
+  text-decoration: none;
+  color: #fff;
+  background-color: crimson;
+  text-align: center;
+  letter-spacing: .5px;
+  -webkit-transition: .2s ease-out;
+  -moz-transition: .2s ease-out;
+  -o-transition: .2s ease-out;
+  -ms-transition: .2s ease-out;
+  transition: .2s ease-out;
+  cursor: pointer;
+}
+
+
+.btn, .btn-large, .btn-flat {
+  border: none;
+  border-radius: 2px;
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  outline: 0;
+  padding: 0 2rem;
+  text-transform: uppercase;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:hover{
+  background-color: #d33554;
+}
+
+
+.input-field .prefix ~ textarea {
+  padding-top: 0.8rem;
+}
+
+.input-field .prefix ~ label {
+  margin-left: 3rem;
+}
+
+.input-field .prefix {
+  position: absolute;
+  width: 3rem;
+  font-size: 2rem;
+  -webkit-transition: color .2s;
+  -moz-transition: color .2s;
+  -o-transition: color .2s;
+  -ms-transition: color .2s;
+  transition: color .2s;
+}
+
+
+.input-field label {
+   color: #9e9e9e; 
+   font-size: 1.2rem;
+
+}
+
+
+
+input[type=text]:focus{
+
+border-bottom: 1px solid crimson;
+box-shadow: 0 1px 0 0 crimson;
+}
+
+
+
+button, input, optgroup, select, textarea {
+   color: inherit; 
+   font: inherit; 
+   margin: 0; 
+}
+
+
+.btn i, .btn-large i, .btn-floating i, .btn-large i, .btn-flat i {
+  font-size: 1.3rem;
+  line-height: inherit;
+}
+
+
+i.right {
+  float: right;
+  margin-left: 15px;
+}
+
+
+
+
+textarea.materialize-textarea {
+  overflow-y: hidden;
+  padding: 1.6rem 0;
+  resize: none;
+  min-height: 3rem;
+}
+
+textarea{
+  max-height: 180px;
+ 
+}
+
+
+textarea:focus{
+  border-bottom: 1px solid crimson;
+}
+
+
+i{
+  color: #fff;
+}
+
+
+#icon-back{
+  margin-top: 80px;
+  border-radius: 100%;
+  width: 30px;
+  height: 25px;
+  padding: 3px 3px;
+  text-align: center;
+  background-color: #D33554;
+}
+
+#icon-back:hover{
+
+  background-color: #c01134;
+}

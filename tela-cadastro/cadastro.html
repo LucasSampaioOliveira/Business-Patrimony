@@ -1,0 +1,80 @@
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<title>Formulario de Cadastro</title>
+	
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link rel="stylesheet" href="/tela-cadastro/cadastro.css">
+</head>
+<body>
+	<section class="container">
+		<div class="row">
+			<div class="back">
+				<a href="/tela-busca/busca.html"><i class="material-icons prefix" id="icon-back">arrow_back_ios</i></a>
+			</div>
+		<h3 class="center-align">Cadastro de Patrimônio</h3>
+			<article class="col s6 offset-s3">
+				<form method="POST" action="http://127.0.0.1:3000/api/patrimonio/add" id="form--salvar">
+					<div class="input-field">
+						<i class="material-icons prefix">lock</i>
+						<label for="ID">Patrimônio</label>
+						<input type="text" name="ID" id="id" required>
+					</div>
+
+					<div class="input-field">
+						<i class="material-icons prefix"">widgets</i>
+						<label for="tipo">Tipo</label>
+						<input type="text" name="tipo" id="tipo" required>
+					</div>
+					
+					<div class="input-field">
+						<i class="material-icons prefix"">note_add</i>
+						<label for="modelo">Modelo</label>
+						<input type="text" name="modelo" id="modelo" required>
+					</div>
+
+					<div class="input-field">
+						<i class="material-icons prefix"">calendar_month</i>
+						<label for="data">Data</label>
+						<input type="text" name="data" id="data" required>
+					</div>
+
+
+					<div class="input-field">
+						<i class="material-icons prefix"">location_on</i>
+						<label for="localizacao">Localização</label>
+						<input type="text" name="localizacao"" id="localizacao"" required>
+					</div>
+
+
+
+					<div class="input-field">
+						<i class="material-icons prefix"">attach_money</i>
+						<label for="valor">Valor</label>
+						<input type="text" name="valor" id="valor" required>
+					</div>
+
+
+					<div class="input-field">
+						<i class="material-icons prefix"">mode_edit</i>
+						<label for="observação" class="active">Observação</label>
+						<textarea name="observação" id="observacao" rows="50" class="materialize-textarea"  length="600" required></textarea>
+					</div>
+					
+					<p class="center-align">
+						<a href="/tela-busca/busca.html"><button class="waves-effect waves-light btn" type="submit" id="btn--salvar"><i class="material-icons right">send</i>enviar</button></a>
+					</p>
+
+				</form>
+
+
+
+			</article>
+		</div>
+	</section>
+
+	<script src="/tela-cadastro/cadastro.js"></script>
+	<script src="/matomo/matomo.js"></script>	
+	
+</body>
+</html>
